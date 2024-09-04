@@ -24,6 +24,11 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
@@ -40,7 +45,13 @@
                 <target>17</target>
             </configuration>
         </plugin>
+		<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.3.0</version>
+		</plugin>
     </plugins>
+	<finalName>basic-spring-app</finalName>
 	</build>
 
 </project>

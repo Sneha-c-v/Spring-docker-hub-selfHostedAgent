@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-spring-app
+spec:
+  selector:
+    matchLabels:
+      app: basic-spring-app
+  replicas: 2
+  template:
+    metadata: 
+      labels:
+        app: basic-spring-app
+    spec:
+      containers:
+        - name: basic-spring-app
+          image: smayav/basic-spring-app:latest
+          imagePullPolicy: IfNotPresent
+          ports: 
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: mydockerhubsecret
